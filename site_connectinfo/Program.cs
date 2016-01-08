@@ -12,8 +12,10 @@ namespace site_connectinfo
     {
         static void Main(string[] args)
         {
-
-            string adresStrony = "www.spoko.poznan.pl";
+            Console.WriteLine("Witaj w programie wypisujacym informacje o polaczeniu z witryna\n");
+            Console.WriteLine("Podaj adres witryny: \n");
+            string adresStrony = Console.ReadLine();
+            Console.WriteLine("\n");
             var adresy = Dns.GetHostAddresses(adresStrony);
             var port = 80;
             foreach (var adresIp in adresy)
